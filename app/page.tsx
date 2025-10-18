@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, Heart, ShoppingBag, TrendingUp } from "lucide-react"
+import { Sparkles, Heart, ShoppingBag, TrendingUp, Brain, Zap } from "lucide-react"
 import Image from "next/image"
 
 export default function LandingPage() {
@@ -89,6 +89,58 @@ export default function LandingPage() {
           </Card>
         </div>
 
+        {/* Coming Soon - AI Business Assistant */}
+        <div className="mb-16">
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#7D9B7F]/10 via-white/80 to-[#C89B9B]/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 max-w-4xl mx-auto border border-[#E5DCC8] shadow-lg">
+            {/* Coming Soon Badge */}
+            <div className="absolute top-6 right-6">
+              <span className="inline-flex items-center gap-1 px-4 py-1.5 bg-[#7D9B7F] text-white text-sm font-semibold rounded-full shadow-md">
+                <Zap className="w-4 h-4" />
+                Coming Soon
+              </span>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* Icon */}
+              <div className="flex-shrink-0">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-[#7D9B7F]/20 rounded-full blur-xl animate-pulse"></div>
+                  <div className="relative bg-white/90 p-6 rounded-full border-2 border-[#7D9B7F]/30">
+                    <Brain className="w-16 h-16 text-[#7D9B7F]" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#5A4A3A] mb-4">
+                  AI-Powered Business Assistant
+                </h3>
+                <p className="text-[#8B7355] mb-6 leading-relaxed">
+                  Your intelligent companion for business growth. Get instant answers about your performance, 
+                  discover your best-selling products, and stay ahead with insights into the latest Kenyan market trends.
+                </p>
+                
+                {/* Feature Pills */}
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                  <span className="px-3 py-1 bg-white/80 text-[#5A4A3A] text-sm rounded-full border border-[#E5DCC8]">
+                    📊 Business Insights
+                  </span>
+                  <span className="px-3 py-1 bg-white/80 text-[#5A4A3A] text-sm rounded-full border border-[#E5DCC8]">
+                    📈 Growth Analytics
+                  </span>
+                  <span className="px-3 py-1 bg-white/80 text-[#5A4A3A] text-sm rounded-full border border-[#E5DCC8]">
+                    🏆 Top Products
+                  </span>
+                  <span className="px-3 py-1 bg-white/80 text-[#5A4A3A] text-sm rounded-full border border-[#E5DCC8]">
+                    🇰🇪 Kenyan Market Trends
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 max-w-2xl mx-auto border border-[#E5DCC8]">
@@ -108,7 +160,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-16 border-t border-[#E5DCC8]">
         <div className="text-center text-[#8B7355]">
-          <p>&copy; 2025 Bootyque. All rights reserved.</p>
+          <p>&copy; 2025 <a href="https://wanailabs.org" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#7D9B7F] hover:text-[#6B8A6D] hover:underline transition-colors">Wan AI Labs</a>. All rights reserved.</p>
           <p className="mt-2 text-sm italic">Effortless Style. Perfected Sales</p>
         </div>
       </footer>
